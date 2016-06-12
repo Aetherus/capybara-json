@@ -2,7 +2,7 @@ class Capybara::RackTestJson::Driver < Capybara::Json::Driver::Base
   attr_reader :app, :options
 
   def initialize(app, options = {})
-    @app, @options = app, { :follow_redirect => true }.merge(options)
+    @app, @options = app, { :follow_redirect => false }.merge(options)
   end
 
   def client
